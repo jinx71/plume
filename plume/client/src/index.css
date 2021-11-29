@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  /* Visible keyboard focus everywhere — accessibility floor. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-indigo ring-offset-2 ring-offset-paper;
+  }
+
+  /* Honour users who prefer less motion. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Thin custom scrollbar for the feed columns. */
+  .scroll-slim::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scroll-slim::-webkit-scrollbar-thumb {
+    background: #dcdce8;
+    border-radius: 9999px;
+  }
+  .scroll-slim::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
