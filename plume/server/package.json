@@ -1,0 +1,41 @@
+{
+  "name": "plume-server",
+  "version": "1.0.0",
+  "description": "Plume — minimalist real-time social network (Express + Mongoose + Socket.io)",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=16 <17"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix ../client",
+    "seed": "node src/utils/seed.js"
+  },
+  "keywords": [
+    "mern",
+    "socket.io",
+    "jwt",
+    "social"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "dotenv": "16.0.3",
+    "express": "4.18.1",
+    "express-rate-limit": "6.7.0",
+    "express-validator": "6.14.2",
+    "helmet": "6.0.1",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "6.5.4",
+    "morgan": "1.10.0",
+    "node-cache": "5.1.2",
+    "socket.io": "4.5.4"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "nodemon": "2.0.20"
+  }
+}
