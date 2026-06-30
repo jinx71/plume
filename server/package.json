@@ -4,7 +4,7 @@
   "description": "Plume — minimalist real-time social network (Express + Mongoose + Socket.io)",
   "main": "src/server.js",
   "engines": {
-    "node": ">=16 <17"
+    "node": ">22"
   },
   "scripts": {
     "start": "node src/server.js",
